@@ -99,7 +99,7 @@ async function main(
 
   // load on-chain data
   if (last.merkleRoot !== "") {
-    const provider = new JsonRpcProvider("https://rpc.phalcon.blocksec.com/rpc_9ef21376be7646789cd2d3c8653ac70a");
+    const provider = new JsonRpcProvider("https://rpc.ankr.com/eth");
     const contract = new Contract(
       "0xaBC6A4e345801Cb5f57629E79Cd5Eb2e9e514e98",
       MultiMerkleStashABI,
