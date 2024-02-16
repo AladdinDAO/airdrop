@@ -33,7 +33,7 @@ interface IMerkleClaimInfo {
 
 const MultiMerkleStashABI = [
   "function merkleRoot(address) external view returns (bytes32)",
-  "function update(address) external view returns (bytes32)",
+  "function update(address) external view returns (uint256)",
 ];
 
 function computeSlot(token: string, update: bigint, index: bigint): string {
@@ -99,7 +99,7 @@ async function main(
 
   // load on-chain data
   if (last.merkleRoot !== "") {
-    const provider = new JsonRpcProvider("https://rpc.ankr.com/eth");
+    const provider = new JsonRpcProvider("https://rpc.phalcon.blocksec.com/rpc_9ef21376be7646789cd2d3c8653ac70a");
     const contract = new Contract(
       "0xaBC6A4e345801Cb5f57629E79Cd5Eb2e9e514e98",
       MultiMerkleStashABI,
@@ -125,6 +125,7 @@ async function main(
       const bucket = Math.floor(info.index / 256);
       const offset = info.index % 256;
       if ((bitmap[bucket] & (1n << toBigInt(offset))) === 0n) {
+        if (rewards[address] === undefined) rewards[address] = 0n;
         rewards[address] += toBigInt(info.amount);
       }
     }
