@@ -1,0 +1,32 @@
+{
+  "symbol": "wstETH",
+  "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+  "date": "20240305",
+  "merkleRoot": "0xd3c9df494d0cd7b519d5e37b0c83e56919e62407ce44cb2320aa9af48c9a3901",
+  "total": "3000000000000000000",
+  "claims": {
+    "0x488b99c4A94BB0027791E8e0eEB421187EC9a487": {
+      "index": 0,
+      "amount": "2930792840000000000",
+      "proof": [
+        "0x06fc9216da8f11fa4cfed80c55fafd5a0865824f797edc08f976e3d3f0230e18",
+        "0x401273a560272181da69755848ac2a0d01c8975f45bdc262f3e600b99d205a01"
+      ]
+    },
+    "0x20216577f78eE7D6d5b2b962C744a950efc77437": {
+      "index": 1,
+      "amount": "50589590000000000",
+      "proof": [
+        "0xbc012a22d93c1a43ce2f7d4daa55c7af98238d9609f08f3dee9672609f7e3364"
+      ]
+    },
+    "0xa9d12e95b35e44A6fDE3A9879E99dd89E06dB5f0": {
+      "index": 2,
+      "amount": "18617570000000000",
+      "proof": [
+        "0x365f5c8f40b8e66f0643a23d3b61b7726cd1be612fff1fcacab69a82e7b22617",
+        "0x401273a560272181da69755848ac2a0d01c8975f45bdc262f3e600b99d205a01"
+      ]
+    }
+  }
+}
