@@ -12,3 +12,4 @@ artifacts
 .store
 
 deployments/fork*
+data/*.*
