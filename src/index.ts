@@ -113,7 +113,7 @@ async function main(
     const length = Object.keys(last.claims).length;
     const bitmap: Array<bigint> = [];
     for (let i = 0; i < length; i += 256) {
-      const slot = computeSlot(tokenAddress, update - 1n, toBigInt(i));
+      const slot = computeSlot(tokenAddress, update - 1n, toBigInt(i) / 256n);
       const data = await provider.getStorage(await contract.getAddress(), slot);
       const value: bigint = ethers.AbiCoder.defaultAbiCoder().decode(
         ["uint256"],
