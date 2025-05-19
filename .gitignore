@@ -13,3 +13,4 @@ artifacts
 
 deployments/fork*
 data/*.*
+.DS_Store
